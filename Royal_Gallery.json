@@ -1,0 +1,15 @@
+{
+  "id": "Royal Gallery",
+  "name": "Royal Gallery",
+  "display_name": "Royal Gallery",
+  "author": ["Royal Rotation, gfs (Punchline /CB)"],
+  "description": "A vanilla oriented mod seemingly like the Balatro you know, but with two brands of cards merged, Advisors and Jokers! In other words, it's Balatro but expanded. Art by Royal_Rotation and gfs (Punchline /CB)",
+  "prefix": "rlg",
+  "prefixcomment":"ABOVE PREFIX IS ADDED TO E.G. LOCALIZATION!",
+  "main_file": "Royal_Gallery.lua",
+  "priority": 0,
+  "badge_colour": "C75062",
+  "badge_text_colour": "AFB6CF",
+  "version": "0.1.0",
+  "dependencies": ["Steamodded (1.0.0~BETA-1018a)"]
+}
