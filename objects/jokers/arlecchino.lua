@@ -4,6 +4,9 @@ SMODS.Joker{
     pos = { x = 0, y = 4 },
     rarity = 4,
     cost = 20,
+    artist_credits = {
+        "punchline"
+    },
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

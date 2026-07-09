@@ -4,6 +4,9 @@ SMODS.Joker {
     pos = { x = 5, y = 0 },
     rarity = 1,
     cost = 5,
+    artist_credits = {
+        "royal_rotation"
+    },
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,

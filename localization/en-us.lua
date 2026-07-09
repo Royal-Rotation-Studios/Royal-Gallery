@@ -267,11 +267,14 @@ return {
                 },
             },]]
         },
-        --Card = {
-        --    c_sj_eleven = {
-        --        name = "11",
-        --    },
-        --}
+        ["Artist"] = {
+            royal_rotation = {
+                name = "Royal_Rotation"
+            },
+            punchline = {
+                name = "gfs (Punchline /CB)"
+            }
+        }
     },
     misc = {
         dictionary = {

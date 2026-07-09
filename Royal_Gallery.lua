@@ -45,6 +45,9 @@ for _, file in ipairs(joker_src) do
     assert(SMODS.load_file("objects/jokers.lua"))()
 end
 
+--Artists
+assert(SMODS.load_file("utils/artists.lua"))()
+
 -- Cards
 local card_src = NFS.getDirectoryItems(SMODS.current_mod.path .. "objects")
 for _, file in ipairs(card_src) do
