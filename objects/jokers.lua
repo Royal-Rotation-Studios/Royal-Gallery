@@ -35,6 +35,7 @@ local joker_list = {
     'limited_edition',
     'royal_guard',
     'lucky_7s',
+    'masquerade',
     'stone_skipping',
     'ruler_everything',
     'zero_sum',

@@ -38,7 +38,7 @@ SMODS.Joker {
                 end
             end
 
-            if not found_five then
+            if not found_five and card.ability.extra.mult > 0 then
                 card.ability.extra.mult = 0
                 return {
                     message = localize('k_reset'),

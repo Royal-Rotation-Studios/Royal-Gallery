@@ -143,6 +143,15 @@ return {
                     }
                 },
             },
+            j_rlg_tough_crowd = {
+                name = "Tough Crowd",
+                text = {
+                    {
+                        "Retrigger each played",
+                        "{C:attention}6{}, {C:attention}7{}, {C:attention}8{}, {C:attention}9{}, or {C:attention}10{}",
+                    }
+                },
+            },
             j_rlg_reinforcement_tape = {
                 name = "Reinforcement Tape",
                 text = {
@@ -214,6 +223,18 @@ return {
                     }
                 },
             },
+            j_rlg_friends_lovers = {
+                name = "Friends to Lovers",
+                text = {
+                    {
+                        "On {C:attention}first hand{} of round,",
+                        "if played hand contains a {C:attention}Wild Card{},",
+                        "{C:green}#2# in #3#{} chance to add {C:blue}+#1#{} Hand.",
+                        "Chance {C:attention}increases{} with every played",
+                        "{C:attention}Wild Card{}",
+                    }
+                },
+            },
             j_rlg_art_box = {
                 name = "Art Box",
                 text = {
@@ -249,6 +270,10 @@ return {
                         "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
                     }
                 },
+                unlock = {
+                    "Find this Joker from",
+                    "the {C:spectral}Soul{} card."
+                }
             },
             --[[j_rlg_terminal_hyperdeath = {
                 name = "Terminal Hyperdeath",
