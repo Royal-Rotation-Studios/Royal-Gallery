@@ -191,6 +191,17 @@ return {
                     }
                 },
             },
+            j_rlg_masquerade = {
+                name = "Masquerade",
+                text = {
+                    {
+                        "{C:attention}Scored{} playing cards become",
+                        "{C:attention}Wild Cards{} if at least {C:attention}one{}",
+                        "{C:attention}Wild Card{} is scored. {C:attention}Wild Cards{}",
+                        "cannot be {C:gray}debuffed{}",
+                    }
+                },
+            },
             j_rlg_stone_skipping = {
                 name = "Stone Skipping",
                 text = {
@@ -232,6 +243,7 @@ return {
                         "{C:green}#2# in #3#{} chance to add {C:blue}+#1#{} Hand.",
                         "Chance {C:attention}increases{} with every played",
                         "{C:attention}Wild Card{}",
+                        "{C:inactive}(#4#)",
                     }
                 },
             },

@@ -25,23 +25,35 @@ SMODS.Joker{
                 end
             end
 
-            if wild > 0 and SMODS.pseudorandom_probability(card, "friends_lovers", wild + 2, card.ability.extra.denom) then
-                G.E_MANAGER:add_event(Event({func = function()
-                    ease_hands_played(card.ability.extra.extra_hand)
-                    card_eval_status_text(card, 'extra', nil, nil, nil, {
-                        message = localize{type = 'variable', key = 'a_hands', vars = {card.ability.extra.extra_hand}}
-                    })
-                    return true
-                end}))
+            if SMODS.pseudorandom_probability(card, "friends_lovers", wild + 1, card.ability.extra.denom) then
+                if wild > 0 then
+                    G.E_MANAGER:add_event(Event({func = function()
+                        ease_hands_played(card.ability.extra.extra_hand)
+                        card_eval_status_text(card, 'extra', nil, nil, nil, {
+                            message = localize{type = 'variable', key = 'a_hands', vars = {card.ability.extra.extra_hand}}
+                        })
+                        return true
+                    end}))
+                end
+            else
+                if wild > 0 then
+                    G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.4, func = function()
+                        card_eval_status_text(card, 'extra', nil, nil, nil, {
+                            message = localize('k_nope_ex')
+                        })
+                    return true end}))
+                end 
             end
 		end
 	end,
 
     loc_vars = function(self, info_queue, card)
+        local status =  G.GAME.current_round.hands_played == 0 and "Active" or "Inactive"
+
         local denom = (card and card.ability and card.ability.extra and card.ability.extra.denom)
                     or (self.config and self.config.extra and self.config.extra.denom)
                     or 3      
         local a, b = SMODS.get_probability_vars(card, 1, denom)
-        return { vars = { card.ability.extra.extra_hand, a, b }, key = self.key }
+        return { vars = { card.ability.extra.extra_hand, a, b, status }, key = self.key }
     end
 }
