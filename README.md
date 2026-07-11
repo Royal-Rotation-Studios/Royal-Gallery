@@ -3,7 +3,7 @@ A mod based on the vanilla game with the goal of expanding the base game (Founde
 
 # Additions
 As of this version, Royal Gallery currently adds
-* 24 Jokers
+* 27 Jokers
 * with way more to come trust
 
 # Dependencies / Installation
