@@ -113,7 +113,7 @@ return {
                     {
                         "Each played {C:attention}#3#{} gains this",
                         "card {X:mult,C:white}X#2#{} Mult,",
-                        "and gains {X:mult,C:white}X#1#{} Mult if",
+                        "and gives {X:mult,C:white}X#1#{} Mult if",
                         "played hand is a {C:attention}#3#{}",
                     }
                 },

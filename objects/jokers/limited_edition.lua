@@ -19,12 +19,12 @@ SMODS.Joker{
     pixel_size = { w = 47, h = 64},
 
     calculate = function(self, card, context)
-        if not (context.individual or context.repetition) and context.other_joker and context.other_joker.config.center.rarity == 3 and self ~= context.other_joker then
+        if not (context.individual or context.repetition) and context.other_joker and context.other_joker.config.center.rarity == 3 and card ~= context.other_joker then
             shakecard(context.other_joker)
             return {
-                message = localize{type='variable',key='a_xmult',vars={card.ability.extra.x_mult}},
-                colour = G.C.RED,
-                x_mult = card.ability.extra.x_mult
+                --message = localize{type='variable',key='a_xmult',vars={card.ability.extra.x_mult}},
+                x_mult = card.ability.extra.x_mult,
+                colour = G.C.RED
             }
         end
     end,

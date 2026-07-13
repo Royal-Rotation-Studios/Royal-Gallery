@@ -6,7 +6,7 @@ local joker_list = {
     'waste_disposal',
     'under_paid',
     'three_jokes_trench_coat',
-    'alphabet_food',
+    'alphabet_noodles',
     'reach_stars',
     'rule_4',
     'jackoat',
