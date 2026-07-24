@@ -10,11 +10,15 @@ SMODS.Joker{
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    unlocked = true,
+    unlocked = false,
     discovered = false,
     effect = nil,
     atlas = 'jokers',
     soul_pos = nil,
+
+    check_for_unlock = function(self, args)
+        return G.GAME and G.GAME.rlg_failed_probabilities >= 10
+    end,
 
     calculate = function(self, card, context)
         if context.repetition and context.cardarea == G.play then

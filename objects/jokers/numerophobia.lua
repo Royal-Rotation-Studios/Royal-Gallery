@@ -7,14 +7,21 @@ SMODS.Joker {
     artist_credits = {
         "royal_rotation"
     },
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
-    unlocked = true,
+    unlocked = false,
     discovered = false,
     effect = nil,
     atlas = 'jokers',
     soul_pos = nil,
+
+    check_for_unlock = function(self, args)
+        if G.GAME and G.GAME.rlg_numbered_cards_destroyed >= 20 then
+            return true
+        end
+        return false
+    end,
 
     calculate = function(self, card, context)
         --return true if any played card is anumbered card

@@ -37,6 +37,10 @@ SMODS.Joker{
                         end
                     }))
                 end
+                return {
+                    message = "Wild",
+                    colour = G.C.GOLD
+                }
             end
         end
     end,

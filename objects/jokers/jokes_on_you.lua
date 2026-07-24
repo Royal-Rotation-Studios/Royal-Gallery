@@ -10,9 +10,13 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    unlocked = true,
+    unlocked = false,
     discovered = false,
     atlas = "jokers",
+
+    check_for_unlock = function(self, args)
+        return G.GAME and G.GAME.rlg_lost_ante_8
+    end,
 
     calculate = function(self, card, context)
         -- NORMAL NON-BOSS
@@ -24,11 +28,11 @@ SMODS.Joker {
         end
 
         -- BOSS EFFECT
-        if context.joker_main and context.cardarea == G.jokers and G.GAME.blind.boss then
+        if context.joker_main and context.cardarea == G.jokers and G.GAME.blind.boss and G.GAME.current_round.hands_played == 0 then
 
             card.ability.extra.trigger_times = (card.ability.extra.trigger_times or 0) + 1
 
-            if card.ability.extra.trigger_times >= 4 then
+            if card.ability.extra.trigger_times >= 5 then
                 local msg = "Exploded!"
                 G.E_MANAGER:add_event(Event({
                     func = function()

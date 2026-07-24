@@ -1,5 +1,6 @@
 G.ARGS.LOC_COLOURS.royal_rotation = HEX("827AFF")
 G.ARGS.LOC_COLOURS.punchline = HEX("3C4368")
+G.ARGS.LOC_COLOURS.muddz = HEX("C47B41")
 
 
 function artist_node(artists)

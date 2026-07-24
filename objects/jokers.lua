@@ -38,7 +38,7 @@ local joker_list = {
     'masquerade',
     'stone_skipping',
     'ruler_everything',
-    'zero_sum',
+    'cutouts',
     'high_five',
     "friends_lovers",
     'patio',
@@ -47,8 +47,8 @@ local joker_list = {
     'alphabet_soup',
     'wayback_machine',
     'art_box',
-    'mount_joker',
     'mountainside',
+    'mount_joker',
     'glass_canon',
     -- legendaries
     --'time_loop',
@@ -79,13 +79,6 @@ function return_JokerValues() -- not used, just here to demonstrate how you coul
         }
     end
 end
-
-SMODS.Atlas({
-    key = "jokers",
-    path = "jokers.png",
-    px = 71,
-    py = 95
-})
 
 for _, key in ipairs(joker_list) do
     local rel = "objects/jokers/" .. key .. ".lua"

@@ -2,14 +2,39 @@ Royal_Gallery = {}
 
 assert(SMODS.load_file("globals.lua"))()
 
---Jokers
-local joker_src = NFS.getDirectoryItems(SMODS.current_mod.path .. "objects")
-for _, file in ipairs(joker_src) do
-    assert(SMODS.load_file("objects/jokers.lua"))()
-end
+--Atlas
+assert(SMODS.load_file("utils/atlas.lua"))()
 
 --Artists
 assert(SMODS.load_file("utils/artists.lua"))()
+
+-- Enhancements (importan to load them here before things that use them)
+local enhancement_src = NFS.getDirectoryItems(SMODS.current_mod.path .. "objects/enhancements")
+for _, file in ipairs(enhancement_src) do
+    assert(SMODS.load_file("objects/enhancements/" .. file))()
+end
+
+-- Consumables
+local consumable_src = NFS.getDirectoryItems(SMODS.current_mod.path .. "objects/consumables")
+
+for _, file in ipairs(consumable_src) do
+    if string.sub(file, -4) == ".lua" then
+        assert(SMODS.load_file("objects/consumables/" .. file))()
+    else
+        local sub_src = NFS.getDirectoryItems(SMODS.current_mod.path .. "objects/consumables/" .. file)
+        for _, sub_file in ipairs(sub_src) do
+            if string.sub(sub_file, -4) == ".lua" then
+                assert(SMODS.load_file("objects/consumables/" .. file .. "/" .. sub_file))()
+            end
+        end
+    end
+end
+
+-- Jokers
+assert(SMODS.load_file("objects/jokers.lua"))()
+
+--Hooks
+assert(SMODS.load_file("utils/hooks.lua"))()
 
 --[[ Cards
 local card_src = NFS.getDirectoryItems(SMODS.current_mod.path .. "objects")

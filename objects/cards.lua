@@ -1,10 +1,4 @@
---High contrast
-SMODS.Atlas({
-    key = "deck_hc", --High contrast
-    path = "deck_opt2.png",
-    px = 69,
-    py = 93
-})
+
 
 --List of ranks
 --SMODS.Rank {

@@ -7,7 +7,7 @@ SMODS.Joker {
     artist_credits = {
         "royal_rotation"
     },
-    blueprint_compat = false,
+    blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     unlocked = true,
@@ -20,52 +20,28 @@ SMODS.Joker {
                 local hand = G.hand.cards
                 local first = hand[1]
                 if first then
-                    local suit = first.suit
-                    if not suit and first.is_suit then
-                        local suits = { "Hearts", "Diamonds", "Clubs", "Spades" }
-                        for _, s in ipairs(suits) do
-                            if first:is_suit(s) then
-                                suit = s
+                    local suit = first.base.suit
+
+                    if not suit then
+                        for key in pairs(SMODS.Suits) do
+                            if first:is_suit(key) then
+                                suit = key
                                 break
                             end
                         end
                     end
 
                     if suit then
-                        local all_same = true
                         for i = 2, #hand do
-                            local c = hand[i]
-                            if c then
-                                if c.suit then
-                                    if c.suit ~= suit then
-                                        all_same = false
-                                        break
-                                    end
-                                else
-                                    if c.is_suit then
-                                        if not c:is_suit(suit) then
-                                            all_same = false
-                                            break
-                                        end
-                                    else
-                                        all_same = false
-                                        break
-                                    end
-                                end
-                            else
-                                all_same = false
-                                break
+                            if not hand[i]:is_suit(suit) then
+                                return
                             end
                         end
 
-                        if all_same then
-                            local mult = (this_card and this_card.ability and this_card.ability.extra and this_card.ability.extra.mult)
-                                         or (self and self.config and self.config.extra and self.config.extra.mult)
-                                         or 0
-                            if mult and mult > 0 then
-                                return { mult = mult, card = this_card }
-                            end
-                        end
+                        return {
+                            mult = this_card.ability.extra.mult,
+                            card = this_card
+                        }
                     end
                 end
             end

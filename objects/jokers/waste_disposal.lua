@@ -19,25 +19,25 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.joker_main then
             return {
-                card = card,
                 x_chips = card.ability.extra.x_chips,
-                message = 'x' .. card.ability.extra.x_chips,
                 colour = G.C.CHIPS,
             }
         end
 
         if context.selling_card and not context.blueprint then
-            if (card.ability.extra.x_chips - card.ability.extra.x_chips_mod) <= 1 then
-                --SMODS.calculate_effect({message = localize('k_eaten_ex'),colour = G.C.RED,}, card)
-                SMODS.destroy_cards(card, nil, nil, true)
-                return { message = "Filled!", colour = G.C.BLUE }
-            else
-                card.ability.extra.x_chips = (card.ability.extra.x_chips or 3) - (card.ability.extra.x_chips_mod or 0.2)
-                return {
-                    delay = 0.2,
-                    message = localize{type='variable',key='a_xchips',vars={card.ability.extra.x_chips}},
-                    colour = G.C.CHIPS,
-                }
+            if context.card ~= card then
+                if (card.ability.extra.x_chips - card.ability.extra.x_chips_mod) <= 1 then
+                    --SMODS.calculate_effect({message = localize('k_eaten_ex'),colour = G.C.RED,}, card)
+                    SMODS.destroy_cards(card, nil, nil, true)
+                    return { message = "Filled!", colour = G.C.BLUE }
+                else
+                    card.ability.extra.x_chips = (card.ability.extra.x_chips or 3) - (card.ability.extra.x_chips_mod or 0.2)
+                    return {
+                        delay = 0.2,
+                        message = localize{type='variable',key='a_xchips',vars={card.ability.extra.x_chips}},
+                        colour = G.C.CHIPS,
+                    }
+                end
             end
         end
     end,

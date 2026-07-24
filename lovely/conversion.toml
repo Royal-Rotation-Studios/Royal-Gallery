@@ -1,0 +1,36 @@
+[manifest]
+version = "1.0.0"
+priority = 1
+
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''
+    local chips = card:get_chip_bonus()
+    if chips ~= 0 then
+        ret.playing_card.chips = chips
+    end
+
+    local mult = card:get_chip_mult()
+    if mult ~= 0 then
+        ret.playing_card.mult = mult
+    end
+'''
+position = "at"
+match_indent = true
+payload = '''
+    local chips = card:get_chip_bonus()
+    local mult = card:get_chip_mult()
+
+    if next(SMODS.find_card("j_rlg_conversion")) then
+        chips, mult = mult, chips
+    end
+
+    if chips ~= 0 then
+        ret.playing_card.chips = chips
+    end
+
+    if mult ~= 0 then
+        ret.playing_card.mult = mult
+    end
+'''

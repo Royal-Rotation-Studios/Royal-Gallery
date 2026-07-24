@@ -10,11 +10,15 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    unlocked = true,
+    unlocked = false,
     discovered = false,
     effect = nil,
     atlas = 'jokers',
     soul_pos = nil,
+
+    check_for_unlock = function(self, args)
+    return RLG_only_face_cards()
+end,
 
     calculate = function(self, card, context)
         if not context.blueprint and context.setting_blind then
@@ -30,7 +34,7 @@ SMODS.Joker {
         end
 
         --remove debuffs at round end
-        if context.end_of_round or context.setting_blind == false or context.selling_self then
+        if context.end_of_round or context.setting_blind == false or context.selling_self and not context.blueprint then
             local source = (self.key or "ruler_everything") .. "_ruler_src"
             for _, v in ipairs(G.playing_cards or {}) do
                 SMODS.debuff_card(v, false, source)
