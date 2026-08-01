@@ -18,7 +18,7 @@ SMODS.Joker{
 
     calculate = function(self,card,context)
         if context.repetition and context.cardarea == G.play then
-            if context.poker_hands[card.ability.extra.poker_hand] then
+            if next(context.poker_hands[card.ability.extra.poker_hand]) then
                 return {
                     message = localize('k_again_ex'),
                     repetitions = 1,
