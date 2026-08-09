@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "high_five",
     config = { extra = { mult = 0, mult_mod = 5 } },
-    pos = { x = 9, y = 5 },
+    pos = { x = 9, y = 3 },
     rarity = 1,
     cost = 4,
     artist_credits = {

@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "friends_lovers",
     config = { extra = { extra_hand = 1, denom = 10 } },
-    pos = { x = 1, y = 6 },
+    pos = { x = 1, y = 4 },
     rarity = 2,
     cost = 6,
     artist_credits = {
@@ -46,6 +46,15 @@ SMODS.Joker{
             end
 		end
 	end,
+
+    in_pool = function(self, args) --enhancement gate so you only can find if theres a wild card in your deck
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if SMODS.has_enhancement(playing_card, 'm_wild') then
+                return true
+            end
+        end
+        return false
+    end,
 
     loc_vars = function(self, info_queue, card)
         local status =  G.GAME.current_round.hands_played == 0 and "Active" or "Inactive"

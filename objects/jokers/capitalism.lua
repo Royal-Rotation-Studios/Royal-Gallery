@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "capitalism",
     config = { extra = { required_rank = 8, cash_reward = 10, passed = false, processed_round = -1, fail_cost = 3 } },
-    pos = { x = 0, y = 2 },
+    pos = { x = 8, y = 2 },
     rarity = 3,
     cost = 7,
     artist_credits = {

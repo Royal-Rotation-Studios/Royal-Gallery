@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "glass_canon",
     config = { extra = { x_mult = 6, denom = 12, triggered = false, safe = true } },
-    pos = { x = 4, y = 3 },
+    pos = { x = 2, y = 5 },
     rarity = 3,
     cost = 9,
     artist_credits = {
@@ -79,6 +79,15 @@ SMODS.Joker {
 
             return { message = localize('k_safe_ex') }
         end
+    end,
+
+    in_pool = function(self, args) --enhancement gate so you only can find if theres a glass card in your deck
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if SMODS.has_enhancement(playing_card, 'm_glass') then
+                return true
+            end
+        end
+        return false
     end,
 
     loc_vars = function(self, info_queue, card)

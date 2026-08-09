@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "alphabet_noodles",
     config = { extra = { } },
-    pos = { x = 6, y = 0 },
+    pos = { x = 7, y = 0 },
     rarity = 1,
     cost = 3,
     yes_pool_flag = "alphabet_noodles_can_spawn",

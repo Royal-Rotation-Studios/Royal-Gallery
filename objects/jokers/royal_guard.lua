@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "royal_guard",
     config = { extra = { checked_rank = 10, rank_to_turn_into = "Jack" } },
-    pos = { x = 5, y = 2 },
+    pos = { x = 4, y = 3 },
     rarity = 2,
     cost = 7,
     artist_credits = {

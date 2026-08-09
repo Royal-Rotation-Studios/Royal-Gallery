@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "ruler_everything",
     config = { extra = { xmult = 1.5, chips = 10 } },
-    pos = { x = 7, y = 2 },
+    pos = { x = 7, y = 3 },
     rarity = 3,
     cost = 10,
     artist_credits = {

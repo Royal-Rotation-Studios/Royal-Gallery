@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "tough_crowd",
     config = { extra = { repetition = 1 } },
-    pos = { x = 2, y = 2 },
+    pos = { x = 0, y = 3 },
     rarity = 2,
     cost = 6,
     artist_credits = {

@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "arlecchino",
     config = { extra = { x_mult = 1, x_mult_mod = 1 } },
-    pos = { x = 0, y = 4 },
+    pos = { x = 0, y = 6 },
     rarity = 4,
     cost = 20,
     artist_credits = {
@@ -14,7 +14,7 @@ SMODS.Joker{
     discovered = false,
     effect = nil,
     atlas = 'jokers',
-    soul_pos = { x = 1, y = 4 },
+    soul_pos = { x = 1, y = 6 },
 
     calculate = function(self, card, context)
         if not context.blueprint and context.joker_type_destroyed and context.card ~= card then

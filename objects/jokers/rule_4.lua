@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "rule_4",
     config = { extra = { } },
-    pos = { x = 1, y = 5 },
+    pos = { x = 0, y = 1 },
     rarity = 3,
     cost = 9,
     artist_credits = {

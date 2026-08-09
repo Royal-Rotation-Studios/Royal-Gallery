@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "stone_skipping",
     config = { extra = { chips_to_add = 5, chips_to_add_mod = 5 } },
-    pos = { x = 6, y = 2 },
+    pos = { x = 6, y = 3 },
     rarity = 2,
     cost = 6,
     artist_credits = {
@@ -48,6 +48,15 @@ SMODS.Joker{
                 }
             end
         end
+    end,
+
+    in_pool = function(self, args) --enhancement gate so you only can find if theres a stoned card in your deck
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if SMODS.has_enhancement(playing_card, 'm_stone') then
+                return true
+            end
+        end
+        return false
     end,
 
     loc_vars = function(self, info_queue, card)

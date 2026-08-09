@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "chain_reaction",
     config = { extra = { poker_hand = "Straight" } },
-    pos = { x = 5, y = 1 },
+    pos = { x = 3, y = 2 },
     rarity = 2,
     cost = 5,
     artist_credits = {

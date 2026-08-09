@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "forgetful_dice",
     config = { extra = { denom = 3 } },
-    pos = { x = 6, y = 1 },
+    pos = { x = 4, y = 2 },
     rarity = 2,
     cost = 6,
     artist_credits = {

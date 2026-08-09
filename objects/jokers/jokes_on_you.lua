@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "jokes_on_you",
     config = { extra = { base_x_mult = 0.5, special_x_mult = 5, trigger_times = 0 } },
-    pos = { x = 5, y = 5 },
+    pos = { x = 9, y = 1 },
     rarity = 3,
     cost = 7,
     artist_credits = {

@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "flip_side",
     config = { extra = { chips = 25, mult = 10, x_mult = 1.2 } },
-    pos = { x = 9, y = 1 },
+    pos = { x = 7, y = 2 },
     rarity = 2,
     cost = 4,
     artist_credits = {

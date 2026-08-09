@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "art_box",
     config = { extra = { x_mult = 1, x_mult_mod = .15 } },
-    pos = { x = 3, y = 3 },
+    pos = { x = 6, y = 4 },
     rarity = 3,
     cost = 8,
     artist_credits = {

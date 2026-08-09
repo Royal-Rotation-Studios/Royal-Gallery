@@ -98,6 +98,16 @@ return {
                     }
                 },
             },
+            j_rlg_discarded_photo = {
+                name = "Discarded Photograph",
+                text = {
+                    {
+                        "If played hand contains only {C:attention}two{}",
+                        "{C:attention}face{} cards, each {C:attention}face{} card",
+                        "held in hand gives {C:mult}+#1#{} Mult",
+                    }
+                },
+            },
             j_rlg_conversion = {
                 name = "Conversion Chart",
                 text = {

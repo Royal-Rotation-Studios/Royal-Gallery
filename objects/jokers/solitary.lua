@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "solitary",
     config = { extra = { x_mult = 1, x_mult_mod = 0.25, type = "High Card" } },
-    pos = { x = 8, y = 1 },
+    pos = { x = 6, y = 2 },
     rarity = 3,
     cost = 8,
     artist_credits = {

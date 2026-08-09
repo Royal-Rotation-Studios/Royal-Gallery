@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "cutouts",
     config = { extra = { x_mult = 1, x_mult_mod = 0.25, destroy_cards = {} } },
-    pos = { x = 8, y = 2 },
+    pos = { x = 8, y = 3 },
     rarity = 3,
     cost = 8,
     artist_credits = {

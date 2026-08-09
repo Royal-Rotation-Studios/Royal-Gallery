@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "design_gallery",
     config = { extra = { enhancement = "m_rlg_pastel", chips_mod = 5, mult_mod = 1 } },
-    pos = { x = 2, y = 1 },
+    pos = { x = 0, y = 2 },
     rarity = 1,
     cost = 6,
     artist_credits = {

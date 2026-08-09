@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "alphabet_soup",
     config = { extra = { denom = 2, money_mod = 2, give_money = false, reset = false } },
-    pos = { x = 1, y = 3 },
+    pos = { x = 4, y = 4 },
     rarity = 3,
     cost = 8,
     yes_pool_flag = "alphabet_soup_can_spawn",

@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "reach_stars",
     config = { extra = { mult = 0, mult_mod = 1 } },
-    pos = { x = 7, y = 0 },
+    pos = { x = 9, y = 0 },
     rarity = 1,
     cost = 5,
     artist_credits = {

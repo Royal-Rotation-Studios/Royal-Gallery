@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "conversion",
     config = { extra = { } },
-    pos = { x = 0, y = 1 },
+    pos = { x = 7, y = 1 },
     rarity = 2,
     cost = 5,
     artist_credits = {

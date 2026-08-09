@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "numerophobia",
     config = { extra = { consumable_amount = 2, create_tarots = false } },
-    pos = { x = 4, y = 2 },
+    pos = { x = 2, y = 3 },
     rarity = 3,
     cost = 9,
     artist_credits = {

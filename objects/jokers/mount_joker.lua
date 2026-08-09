@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "mount_joker",
     config = { extra = { x_mult = 1.25 } },
-    pos = { x = 3, y = 6 },
+    pos = { x = 1, y = 5 },
     rarity = 2,
     cost = 7,
     artist_credits = {
@@ -41,6 +41,15 @@ SMODS.Joker{
                 end
             end
         end
+    end,
+
+    in_pool = function(self, args) --enhancement gate so you only can find if theres a stonbe card in your deck
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if SMODS.has_enhancement(playing_card, 'm_stone') then
+                return true
+            end
+        end
+        return false
     end,
 
     loc_vars = function(self, info_queue, card)

@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "masquerade",
     config = { extra = { } },
-    pos = { x = 4, y = 6 },
+    pos = { x = 5, y = 3 },
     rarity = 3,
     cost = 9,
     artist_credits = {
@@ -77,6 +77,15 @@ SMODS.Joker{
                 end
             end
         end
+    end,
+
+    in_pool = function(self, args) --enhancement gate so you only can find if theres a wild card in your deck
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if SMODS.has_enhancement(playing_card, 'wild') then
+                return true
+            end
+        end
+        return false
     end,
 
     loc_vars = function(self, info_queue, card)

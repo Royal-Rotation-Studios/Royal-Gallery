@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "spare_stencil",
     config = { extra = { } },
-    pos = { x = 4, y = 1 },
+    pos = { x = 2, y = 2 },
     rarity = 1,
     cost = 5,
     artist_credits = {
