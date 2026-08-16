@@ -26,3 +26,17 @@ SMODS.Atlas { -- enhancementss
   py = 95,
   path = 'enhancements.png'
 }
+
+SMODS.Atlas { -- decks
+  key = 'decks',
+  px = 71,
+  py = 95,
+  path = 'rlgd.png'
+}
+
+SMODS.Atlas { -- decks
+  key = 'sleeves',
+  px = 73,
+  py = 95,
+  path = 'sleeves.png'
+}

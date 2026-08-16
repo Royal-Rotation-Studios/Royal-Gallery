@@ -1,0 +1,78 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+match_indent = true
+position = "at"
+pattern = '''
+G.FUNCS.draw_from_play_to_discard = function(e)
+    local play_count = #G.play.cards
+    local it = 1
+    for k, v in ipairs(G.play.cards) do
+        if (not v.shattered) and (not v.destroyed) then 
+            draw_card(G.play,G.discard, it*100/play_count,'down', false, v)
+            it = it + 1
+        end
+    end
+end
+'''
+payload = '''
+G.FUNCS.draw_from_play_to_discard = function(e)
+    local play_count = #G.play.cards
+    local it = 1
+    for k, v in ipairs(G.play.cards) do
+        if (not v.shattered) and (not v.destroyed) then 
+            if G.GAME.monarchy_deck then
+                draw_card(G.play,G.deck, it*100/play_count,'down', false, v)
+            else
+                draw_card(G.play,G.discard, it*100/play_count,'down', false, v)
+            end
+            it = it + 1
+        end
+    end
+
+    if G.GAME.monarchy_deck then
+        G.deck:shuffle('monarchy_deck')
+    end
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+match_indent = true
+position = "at"
+pattern = '''
+draw_card(G.hand, G.discard, i*100/highlighted_count, 'down', false, G.hand.highlighted[i])
+'''
+payload = '''
+if G.GAME.monarchy_deck then
+    draw_card(G.hand,G.deck,i*100/highlighted_count,'down',false,G.hand.highlighted[i])
+else
+    draw_card(G.hand,G.discard,i*100/highlighted_count,'down',false,G.hand.highlighted[i])
+end
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+match_indent = true
+position = "after"
+pattern = '''
+        end
+
+        if destroyed_cards[1] then 
+'''
+payload = '''
+        end
+
+        if G.GAME.monarchy_deck then
+            G.deck:shuffle('monarchy_deck')
+        end
+
+        if destroyed_cards[1] then 
+'''

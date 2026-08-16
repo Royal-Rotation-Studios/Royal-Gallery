@@ -1,5 +1,23 @@
 return {
     descriptions = {
+        Back = { 
+            b_rlg_exhibit = {
+                name = "Exhibit Deck",
+                text = {
+                    "Royal Gallery {C:attention}Jokers{} are {C:attention}3X{} more",
+                    "likely to appear"
+                },
+            },
+            b_rlg_monarchy = {
+                name = "Monarchy Deck",
+                text = {
+                    "Start run with, only",
+                    "{C:attention}Honors{} in your deck.",
+                    "After {C:blue}hand{} or",
+                    "{C:red}discard{}, deck reshuffles",
+                },
+            },
+        },
         Joker = {
             j_rlg_joker_question = {
                 name = "Joker?",
@@ -497,6 +515,39 @@ return {
             muddz = {
                 name = "Muddz"
             }
+        },
+        Sleeve = {
+            sleeve_rlg_exhibit = {
+                name = "Exhibit Deck",
+                text = {
+                    "{C:attention}Royal Gallery Jokers{} are {X:purple,C:white}2X{}",
+                    "more likely to appear in",
+                    "the shop",
+                }
+            },
+            sleeve_rlg_exhibit_alt = { --Alternate effect if sleeve is the same as deck
+                name = "Exhibit Deck",
+                text = {
+                    "{C:attention}+1{} Card Slot available in shop",
+                }
+            },
+            sleeve_rlg_monarchy = {
+                name = "Monarchy Deck",
+                text = {
+                    "Start run with, only",
+                    "{C:attention}Honors{} in your deck.",
+                    "After {C:blue}hand{} or",
+                    "{C:red}discard{}, deck reshuffles",
+                }
+            },
+            sleeve_rlg_monarchy_alt = {
+                name = "Monarchy Deck",
+                text = {
+                    "{C:attention}Numbered Cards{} will",
+                    "no longer appear",
+                    "during the run",
+                }
+            },
         }
     },
     misc = {
