@@ -4,7 +4,7 @@ return {
             b_rlg_exhibit = {
                 name = "Exhibit Deck",
                 text = {
-                    "Royal Gallery {C:attention}Jokers{} are {C:attention}3X{} more",
+                    "Royal Gallery {C:attention}Jokers{} are {X:purple,C:white}2X{} more",
                     "likely to appear"
                 },
             },
