@@ -1,7 +1,7 @@
 SMODS.Joker {
     key = "glass_canon",
     config = { extra = { x_mult = 6, denom = 12, triggered = false, safe = true } },
-    pos = { x = 2, y = 5 },
+    pos = { x = 0, y = 5 },
     rarity = 3,
     cost = 9,
     artist_credits = {

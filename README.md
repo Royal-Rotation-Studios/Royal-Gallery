@@ -9,4 +9,4 @@ As of this version, Royal Gallery currently adds
 * with way more to come trust
 
 # Dependencies / Installation
-- Requires [Steamodded 1014a+](https://github.com/Steamodded/smods/releases)
+- Requires [Steamodded 1814a+](https://github.com/Steamodded/smods/releases)

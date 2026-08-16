@@ -89,7 +89,7 @@ SMODS.Joker{
             deck_signature = ""
         }
     },
-    pos = { x = 0, y = 5 },
+    pos = { x = 8, y = 4 },
     rarity = 2,
     cost = 7,
     artist_credits = {

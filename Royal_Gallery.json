@@ -1,5 +1,5 @@
 {
-  "id": "Royal Gallery",
+  "id": "ROYALGALLERY",
   "name": "Royal Gallery",
   "display_name": "Royal Gallery",
   "author": ["Royal Rotation, gfs (Punchline /CB), Muddz"],
@@ -11,5 +11,5 @@
   "badge_colour": "B2A5D6",
   "badge_text_colour": "5BD5D3",
   "version": "0.1.1",
-  "dependencies": ["Steamodded (1.0.0~BETA-1018a)"]
+  "dependencies": ["Steamodded (>=1.0.0~BETA-1814a)"]
 }

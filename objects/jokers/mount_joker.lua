@@ -1,7 +1,7 @@
 SMODS.Joker{
     key = "mount_joker",
     config = { extra = { x_mult = 1.25 } },
-    pos = { x = 1, y = 5 },
+    pos = { x = 9, y = 4 },
     rarity = 2,
     cost = 7,
     artist_credits = {
