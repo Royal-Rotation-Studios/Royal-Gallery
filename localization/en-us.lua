@@ -128,7 +128,7 @@ return {
                 text = {
                     {
                         "Adds {C:attention}triple{} the rank of",
-                        "the {C:attention}highest{} card held in hand to Chips",
+                        "the {C:attention}highest{} card held in hand to {C:chips}Chips{}",
                     }
                 },
             },
@@ -151,7 +151,7 @@ return {
                         "{X:mult,C:white}X#1#{} Mult",
                         "First played hand, gives {X:mult,C:white}X#2#{} Mult",
                         "in a {C:attention}Boss Blind{}. {C:red}Self destructs{}",
-                        "after triggering {C:attention}4 times{}",
+                        "after triggering {C:attention}4{} times",
                         "{C:inactive}(Currently #3# times)",
                     }
                 },
@@ -277,7 +277,7 @@ return {
                 name = "Reinforcement Tape",
                 text = {
                     {
-                        "{C:attention}Glass cards{} now have a",
+                        "{C:attention}Glass Cards{} now have a",
                         "{C:green}1 in 8{} chance to break",
                     }
                 },
@@ -331,7 +331,7 @@ return {
                 name = "Stone Skipping",
                 text = {
                     {
-                        "Each played {C:attention}stone card{} gains",
+                        "Each played {C:attention}Stone Card{} gains",
                         "{C:chips}+#1#{} Chips. Amount",
                         "{C:attention}increases{} by {C:chips}+#2#{} Chips for",
                         "every {C:attention}blind skipped{}",
@@ -370,8 +370,8 @@ return {
                 name = "High Five?",
                 text = {
                     {
-                        "If played hand contains {C:attention}five{} cards",
-                        "and a {C:attention}5{}, this card gains {C:mult}+#2#{} Mult.",
+                        "If played hand contains a {C:attention}5{},",
+                        "this card gains {C:mult}+#2#{} Mult.",
                         "Resets if no {C:attention}5's{} were scored",
                         "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
                     }
