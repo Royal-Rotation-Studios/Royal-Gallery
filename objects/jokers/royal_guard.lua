@@ -3,7 +3,7 @@ SMODS.Joker {
     config = { extra = { checked_rank = 10, rank_to_turn_into = "Jack" } },
     pos = { x = 4, y = 3 },
     rarity = 2,
-    cost = 7,
+    cost = 6,
     artist_credits = {
         "royal_rotation"
     },

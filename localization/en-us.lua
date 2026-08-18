@@ -55,7 +55,7 @@ return {
                 text = {
                     {
                         "If first {C:blue}hand{} of the round cleared",
-                        "the {C:attention}Blind{}, earn {C:money}+$#1#{} at end of round",
+                        "the {C:attention}Blind{}, earn {C:money}$#1#{} at end of round",
                     }
                 },
             },
@@ -114,7 +114,7 @@ return {
                     {
                         "When a hand is played,",
                         "{C:attention}convert{} the {C:attention}scored cards'{}",
-                        "{C:chips}Chips{} to {C:mult}Mult{} and {C:attention}vice versa{}",
+                        "{C:chips}Chips{} to {C:mult}Mult{} and {C:mult}Mult{} to {C:chips}Chips{}",
                         "{C:inactive,s:0.7}Editions not affected{}"
                     }
                 },
@@ -222,8 +222,8 @@ return {
                 name = "The Solitary",
                 text = {
                     {
-                        "Each played {C:attention}#3#{} gains this",
-                        "card {X:mult,C:white}X#2#{} Mult,",
+                        "Each played {C:attention}#3#{} gains",
+                        "this card {X:mult,C:white}X#2#{} Mult,",
                         "and gives {X:mult,C:white}X#1#{} Mult if",
                         "played hand is a {C:attention}#3#{}",
                     }

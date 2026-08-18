@@ -3,7 +3,7 @@ SMODS.Joker{
     config = { extra = { chips = 25, mult = 10, x_mult = 1.2 } },
     pos = { x = 7, y = 2 },
     rarity = 2,
-    cost = 4,
+    cost = 7,
     artist_credits = {
         "royal_rotation"
     },

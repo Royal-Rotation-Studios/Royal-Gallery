@@ -3,7 +3,7 @@ SMODS.Joker {
     config = { extra = { chance = 8 } },
     pos = { x = 1, y = 3 },
     rarity = 2,
-    cost = 8,
+    cost = 6,
     artist_credits = {
         "royal_rotation"
     },

@@ -3,7 +3,7 @@ SMODS.Joker{
     config = { extra = { } },
     pos = { x = 0, y = 1 },
     rarity = 3,
-    cost = 9,
+    cost = 8,
     artist_credits = {
         "muddz"
     },
